@@ -1,0 +1,5 @@
+C:\Users\franco.e.canevali\Documents\UTN\prog_lab2_practica\frnkq\Clase1\Clase1_ej9\bin\Debug\Clase1_ej9.exe.config
+C:\Users\franco.e.canevali\Documents\UTN\prog_lab2_practica\frnkq\Clase1\Clase1_ej9\bin\Debug\Clase1_ej9.exe
+C:\Users\franco.e.canevali\Documents\UTN\prog_lab2_practica\frnkq\Clase1\Clase1_ej9\bin\Debug\Clase1_ej9.pdb
+C:\Users\franco.e.canevali\Documents\UTN\prog_lab2_practica\frnkq\Clase1\Clase1_ej9\obj\Debug\Clase1_ej9.exe
+C:\Users\franco.e.canevali\Documents\UTN\prog_lab2_practica\frnkq\Clase1\Clase1_ej9\obj\Debug\Clase1_ej9.pdb

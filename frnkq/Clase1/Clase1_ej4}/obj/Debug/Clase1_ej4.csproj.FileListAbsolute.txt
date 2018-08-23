@@ -5,3 +5,10 @@ D:\VisualStudio\frnkq\Clase1\Clase1_ej4}\obj\Debug\Clase1_ej4.csprojAssemblyRefe
 D:\VisualStudio\frnkq\Clase1\Clase1_ej4}\obj\Debug\Clase1_ej4.csproj.CoreCompileInputs.cache
 D:\VisualStudio\frnkq\Clase1\Clase1_ej4}\obj\Debug\Clase1_ej4}.exe
 D:\VisualStudio\frnkq\Clase1\Clase1_ej4}\obj\Debug\Clase1_ej4}.pdb
+C:\Users\franco.e.canevali\Documents\UTN\prog_lab2_practica\frnkq\Clase1\Clase1_ej4}\bin\Debug\Clase1_ej4}.exe.config
+C:\Users\franco.e.canevali\Documents\UTN\prog_lab2_practica\frnkq\Clase1\Clase1_ej4}\bin\Debug\Clase1_ej4}.exe
+C:\Users\franco.e.canevali\Documents\UTN\prog_lab2_practica\frnkq\Clase1\Clase1_ej4}\bin\Debug\Clase1_ej4}.pdb
+C:\Users\franco.e.canevali\Documents\UTN\prog_lab2_practica\frnkq\Clase1\Clase1_ej4}\obj\Debug\Clase1_ej4.csprojAssemblyReference.cache
+C:\Users\franco.e.canevali\Documents\UTN\prog_lab2_practica\frnkq\Clase1\Clase1_ej4}\obj\Debug\Clase1_ej4.csproj.CoreCompileInputs.cache
+C:\Users\franco.e.canevali\Documents\UTN\prog_lab2_practica\frnkq\Clase1\Clase1_ej4}\obj\Debug\Clase1_ej4}.exe
+C:\Users\franco.e.canevali\Documents\UTN\prog_lab2_practica\frnkq\Clase1\Clase1_ej4}\obj\Debug\Clase1_ej4}.pdb

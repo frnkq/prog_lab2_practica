@@ -1,0 +1,6 @@
+C:\Users\franco.e.canevali\Documents\UTN\prog_lab2_practica\frnkq\Clase1\Clase1_ej8\bin\Debug\Clase1_ej8.exe.config
+C:\Users\franco.e.canevali\Documents\UTN\prog_lab2_practica\frnkq\Clase1\Clase1_ej8\obj\Debug\Clase1_ej8.csprojResolveAssemblyReference.cache
+C:\Users\franco.e.canevali\Documents\UTN\prog_lab2_practica\frnkq\Clase1\Clase1_ej8\bin\Debug\Clase1_ej8.exe
+C:\Users\franco.e.canevali\Documents\UTN\prog_lab2_practica\frnkq\Clase1\Clase1_ej8\bin\Debug\Clase1_ej8.pdb
+C:\Users\franco.e.canevali\Documents\UTN\prog_lab2_practica\frnkq\Clase1\Clase1_ej8\obj\Debug\Clase1_ej8.exe
+C:\Users\franco.e.canevali\Documents\UTN\prog_lab2_practica\frnkq\Clase1\Clase1_ej8\obj\Debug\Clase1_ej8.pdb

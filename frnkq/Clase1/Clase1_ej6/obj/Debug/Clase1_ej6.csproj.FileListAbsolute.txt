@@ -4,3 +4,9 @@ D:\VisualStudio\frnkq\Clase1\Clase1_ej6\bin\Debug\Clase1_ej6.pdb
 D:\VisualStudio\frnkq\Clase1\Clase1_ej6\obj\Debug\Clase1_ej6.csproj.CoreCompileInputs.cache
 D:\VisualStudio\frnkq\Clase1\Clase1_ej6\obj\Debug\Clase1_ej6.exe
 D:\VisualStudio\frnkq\Clase1\Clase1_ej6\obj\Debug\Clase1_ej6.pdb
+C:\Users\franco.e.canevali\Documents\UTN\prog_lab2_practica\frnkq\Clase1\Clase1_ej6\bin\Debug\Clase1_ej6.exe.config
+C:\Users\franco.e.canevali\Documents\UTN\prog_lab2_practica\frnkq\Clase1\Clase1_ej6\bin\Debug\Clase1_ej6.exe
+C:\Users\franco.e.canevali\Documents\UTN\prog_lab2_practica\frnkq\Clase1\Clase1_ej6\bin\Debug\Clase1_ej6.pdb
+C:\Users\franco.e.canevali\Documents\UTN\prog_lab2_practica\frnkq\Clase1\Clase1_ej6\obj\Debug\Clase1_ej6.csproj.CoreCompileInputs.cache
+C:\Users\franco.e.canevali\Documents\UTN\prog_lab2_practica\frnkq\Clase1\Clase1_ej6\obj\Debug\Clase1_ej6.exe
+C:\Users\franco.e.canevali\Documents\UTN\prog_lab2_practica\frnkq\Clase1\Clase1_ej6\obj\Debug\Clase1_ej6.pdb
