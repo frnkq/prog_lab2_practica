@@ -1,0 +1,7 @@
+D:\VisualStudio\frnkq\Clase1\Clase1\bin\Debug\Clase1.exe.config
+D:\VisualStudio\frnkq\Clase1\Clase1\bin\Debug\Clase1.exe
+D:\VisualStudio\frnkq\Clase1\Clase1\bin\Debug\Clase1.pdb
+D:\VisualStudio\frnkq\Clase1\Clase1\obj\Debug\Clase1.csprojAssemblyReference.cache
+D:\VisualStudio\frnkq\Clase1\Clase1\obj\Debug\Clase1.csproj.CoreCompileInputs.cache
+D:\VisualStudio\frnkq\Clase1\Clase1\obj\Debug\Clase1.exe
+D:\VisualStudio\frnkq\Clase1\Clase1\obj\Debug\Clase1.pdb

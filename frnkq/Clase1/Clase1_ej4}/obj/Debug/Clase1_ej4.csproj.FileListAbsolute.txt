@@ -1,0 +1,7 @@
+D:\VisualStudio\frnkq\Clase1\Clase1_ej4}\bin\Debug\Clase1_ej4}.exe.config
+D:\VisualStudio\frnkq\Clase1\Clase1_ej4}\bin\Debug\Clase1_ej4}.exe
+D:\VisualStudio\frnkq\Clase1\Clase1_ej4}\bin\Debug\Clase1_ej4}.pdb
+D:\VisualStudio\frnkq\Clase1\Clase1_ej4}\obj\Debug\Clase1_ej4.csprojAssemblyReference.cache
+D:\VisualStudio\frnkq\Clase1\Clase1_ej4}\obj\Debug\Clase1_ej4.csproj.CoreCompileInputs.cache
+D:\VisualStudio\frnkq\Clase1\Clase1_ej4}\obj\Debug\Clase1_ej4}.exe
+D:\VisualStudio\frnkq\Clase1\Clase1_ej4}\obj\Debug\Clase1_ej4}.pdb

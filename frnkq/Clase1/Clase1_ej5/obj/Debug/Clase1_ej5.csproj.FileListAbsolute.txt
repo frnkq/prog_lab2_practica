@@ -1,0 +1,6 @@
+D:\VisualStudio\frnkq\Clase1\Clase1_ej5\bin\Debug\Clase1_ej5.exe.config
+D:\VisualStudio\frnkq\Clase1\Clase1_ej5\bin\Debug\Clase1_ej5.exe
+D:\VisualStudio\frnkq\Clase1\Clase1_ej5\bin\Debug\Clase1_ej5.pdb
+D:\VisualStudio\frnkq\Clase1\Clase1_ej5\obj\Debug\Clase1_ej5.csproj.CoreCompileInputs.cache
+D:\VisualStudio\frnkq\Clase1\Clase1_ej5\obj\Debug\Clase1_ej5.exe
+D:\VisualStudio\frnkq\Clase1\Clase1_ej5\obj\Debug\Clase1_ej5.pdb
