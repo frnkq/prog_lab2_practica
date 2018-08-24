@@ -13,12 +13,16 @@ namespace Clase1_ej10
             int magicNumber = Inputs.getNumber("Ingrese el numero magico");
             for (int j = 0; j < magicNumber; j++)
             {
-                
 
-                for (int i = 0; i <= j; i++)
-                { 
+                for (int h = magicNumber - j ; h>0;h--)
+                {
+                    Console.Write(" ");
+                }
+                    for (int k = (j*2-1)-1; k>=0; k--)
+                {
                     Console.Write("*");
                 }
+                
                 Console.WriteLine();
             }
             Console.ReadKey();
