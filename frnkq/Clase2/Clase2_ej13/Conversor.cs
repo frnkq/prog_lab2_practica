@@ -33,9 +33,10 @@ namespace Clase2_ej13
             for(int i = 0; i < binary.Length; i++)
             {
                 int digito = int.Parse(binary.ElementAt(i).ToString());
-                numero += digito * (2^(4-i));
-
                 
+                numero += digito * Math.Pow(2, binary.Length - i -1);
+                Console.WriteLine("{0}x(2^{1}) = {2}", digito, Math.Pow(2, binary.Length - i -1), numero);
+
             }
             Console.WriteLine("Numero magico: " + numero);
             return numero;
