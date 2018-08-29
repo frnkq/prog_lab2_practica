@@ -10,9 +10,14 @@ namespace Sobrecarga_ej20
     {
         static void Main(string[] args)
         {
-            Dolar d = new Dolar(32.5);
-            Euro e = (Euro)d;
-            Console.WriteLine("dolar: {0} euro: {1}", d.GetCantidad(), e.GetCantidad());
+            Dolar d = new Dolar(30);
+            Peso p = new Peso(10);
+
+            Peso dolarAPeso = (Peso)d;
+
+            Dolar sumaPesoYDolar = d + p;
+
+            Console.WriteLine("Dolar a peso: " + dolarAPeso.GetCantidad()+ " Suma: "+sumaPesoYDolar.GetCantidad());
 
             Console.ReadKey();
         }

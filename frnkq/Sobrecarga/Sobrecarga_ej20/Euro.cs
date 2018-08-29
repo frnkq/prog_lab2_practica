@@ -35,6 +35,6 @@ namespace Sobrecarga_ej20
             return this.cotizRespectoDolar;
         }
 
-
+        
     }
 }

@@ -8,7 +8,6 @@ namespace Sobrecarga_ej20
 {
     class Dolar
     {
-
         public static double inPesos = 17.55;
         public static double inEuros = 0.7330;
 
@@ -27,82 +26,120 @@ namespace Sobrecarga_ej20
             this.cotizRespectoDolar = cotizacion;
         }
 
-        public double GetCantidad()
-        {
-            return this.cantidad;
-        }
+        public double GetCantidad() => this.cantidad;
+        public float GetCotizacion() => this.cotizRespectoDolar;
 
-        public float GetCotizacion()
-        {
-            return this.cotizRespectoDolar;
-        }
+        /// <summary>
+        /// Devuelve un objeto Dolar con cantidad d
+        /// </summary>
+        /// <param name="d">Cantidad que se le asignara al dolar</param>
+        public static implicit operator Dolar(double d) 
+            => new Dolar(d, 1);
 
+        /// <summary>
+        /// Conversor de dolar a euro. Devuelve un euro.
+        /// </summary>
+        /// <param name="d">Dolar al que se le calculara su valor en euros</param>
         public static explicit operator Euro(Dolar d)
-        {
-            Euro e = new Euro(d.GetCantidad() * inEuros, (float)Dolar.inEuros);
-            return e;
-        }
+            => new Euro(d.GetCantidad() * Dolar.inEuros, (float)Euro.inDolars);
+
+        /// <summary>
+        /// Convierte dolar a peso. Devuelve un peso.
+        /// </summary>
+        /// <param name="d">Dolar al que se le calculara su cantidad en pesos</param>
         public static explicit operator Peso(Dolar d)
-        {
-            Peso p = new Sobrecarga_ej20.Peso(d.GetCantidad() * inPesos, (float)Dolar.inPesos);
-            return p;
-        }
+            => new Peso(d.GetCantidad() * Dolar.inPesos, (float)Peso.inDolars);
 
-        public static implicit operator Dolar(double d)
-        {
-            return d;
-        }
-        public static bool operator ==(Dolar d1, Dolar d2)
-        {
-            if (d1.GetCantidad() == d2.GetCantidad())
-                return true;
-            return false;
-        }
-        public static bool operator !=(Dolar d1, Dolar d2)
-        {
-            if (d1.GetCantidad() != d2.GetCantidad())
-                return true;
-            return false;
-        }
+
+        /// <summary>
+        /// Compara la cantidad de dos dolares
+        /// </summary>
+        /// <param name="d1">Primer dolar a comparar</param>
+        /// <param name="d2">Segundo dolar a comparar</param>
+        /// <returns>True si los dos valores son iguales, false si no lo son</returns>
+        public static bool operator ==(Dolar d1, Dolar d2) 
+            => (d1.GetCantidad() == d2.GetCantidad());
+
+        /// <summary>
+        /// Compara la cantidad de dos dolares
+        /// </summary>
+        /// <param name="d1">Primer dolar a comparar</param>
+        /// <param name="d2">Segundo dolar a comparar</param>
+        /// <returns>True si los dos valores son distintos, false si no lo son</returns>
+        public static bool operator !=(Dolar d1, Dolar d2) 
+            => !(d1 == d2);
+
+        /// <summary>
+        /// Compara la cantidad entre un dolar y un euro
+        /// </summary>
+        /// <param name="d">Dolar del cual se obtendrá la cantidad</param>
+        /// <param name="e">Euro del cual se obtendrá la cantidad</param>
+        /// <returns>'true' si las cantidades son iguales, 'false' si no lo son</returns>
         public static bool operator ==(Dolar d, Euro e)
-        {
-            if (d.GetCantidad() == e.GetCantidad())
-                return true;
-            return false;
-        }
-        public static bool  operator !=(Dolar d, Euro e)
-        {
-            if (d.GetCantidad() != e.GetCantidad())
-                return true;
-            return false;
-        }
-        public static bool operator ==(Dolar d, Peso p)
-        {
-            if (d.GetCantidad() != p.GetCantidad())
-                return true;
-            return false;
-        }
-        public static bool operator !=(Dolar d, Peso p)
-        {
-            if (d.GetCantidad() != p.GetCantidad())
-                return true;
-            return false;
-        }
+            => (d.GetCantidad() == e.GetCantidad());
 
-        public static Dolar operator +(Dolar d, Peso p)
-        {
-            return d.cantidad + p.GetCantidad() * inPesos;
-        }
+        /// <summary>
+        /// Compara la cantidad entre un dolar y un euro
+        /// </summary>
+        /// <param name="d">Dolar del cual se obtendrá la cantidad</param>
+        /// <param name="e">Euro del cual se obtendrá la cantidad</param>
+        /// <returns>True si son distintas, false si son iguales</returns>
+        public static bool operator !=(Dolar d, Euro e)
+            => !(d == e);
+
+        /// <summary>
+        /// Compara las cantidades de un dolar y de un peso
+        /// </summary>
+        /// <param name="d">Dolar a comparar la cantidad</param>
+        /// <param name="p">Peso a comparar la cantidad</param>
+        /// <returns>True si las cantidades son iguales, false si no lo son</returns>
+        public static bool operator==(Dolar d, Peso p)
+            => (p.GetCantidad() == p.GetCantidad());
+        
+        /// <summary>
+        /// Compara las cantidades de un dolar y de un peso
+        /// </summary>
+        /// <param name="d">Dolar a comparar la cantidad</param>
+        /// <param name="p">Peso a comparar la cantidad</param>
+        /// <returns>True si las cantidades no son iguales, false si lo son</returns>
+        public static bool operator !=(Dolar d, Peso p)
+            => !(d == p);
+
+        /// <summary>
+        /// Permite la suma entre un dolar y un peso, sumando sus cantidades y devolviendo un dolar con ese valor
+        /// </summary>
+        /// <param name="d">Dolar del cual se obtendrá la cantidad</param>
+        /// <param name="p">Peso del cual se obtendrá la cantidad</param>
+        /// <returns>Devuelve un dolar con cantidad igual a la suma de la cantidad de los parametros</returns>
+        public static Dolar operator +(Dolar d, Peso p) 
+            => new Dolar(d.GetCantidad() + (p.GetCantidad() * Peso.inDolars), 1);
+
+        /// <summary>
+        /// Permite la resta entre un dolar y un peso, restando sus cantidades y devolviendo un dolar con ese valor
+        /// </summary>
+        /// <param name="d">Dolar del cual se obtendrá la cantidad</param>
+        /// <param name="p">Peso del cual se obtendrá la cantidad</param>
+        /// <returns>Devuelve un dolar con cantidad igual a la resta de la cantidad de los parametros</returns>
         public static Dolar operator -(Dolar d, Peso p)
-        {
-            return d.cantidad - p.GetCantidad() * inPesos;
-        }
-        public static Dolar operator +(Dolar d, Euro e) {
-            return d.cantidad + e.GetCantidad() * inEuros;
-        }
-        public static Dolar operator -(Dolar d, Euro e)
-        {
-            return d.cantidad + e.GetCantidad() * inEuros;
-        }
+            => new Dolar(d.GetCantidad() - (p.GetCantidad() * Peso.inDolars), 1);
+
+        /// <summary>
+        /// Permite la suma entre un dolar y un euro, sumando sus cantidades y devolviendo un dolar con ese valor
+        /// </summary>
+        /// <param name="d">Dolar del cual se obtendrá la cantidad</param>
+        /// <param name="e">Euro del cual se obtendrá la cantidad</param>
+        /// <returns>Devuelve un dolar con cantidad igual a la suma de la cantidad de los parametros</returns>
+        public static Dolar operator +(Dolar d, Euro e)
+            => new Dolar(d.GetCantidad() + (e.GetCantidad() * Euro.inDolars), 1);
+
+        /// <summary>
+        /// Permite la resta entre un dolar y un euro, restando sus cantidades y devolviendo un dolar con ese valor
+        /// </summary>
+        /// <param name="d">Dolar del cual se obtendrá la cantidad</param>
+        /// <param name="e">Euro del cual se obtendrá la cantidad</param>
+        /// <returns>Devuelve un dolar con cantidad igual a la resta de la cantidad de los parametros</returns>
+        public static Dolar operator -(Dolar d, Euro e) 
+            => new Dolar(d.GetCantidad() - (e.GetCantidad() * Euro.inDolars), 1);
+
     }
 }
