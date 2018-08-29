@@ -54,6 +54,8 @@ namespace Objetos_ej16
         {
             this._nota1 = n1;
             this._nota2 = n2;
+
+            this.CalcularFinal();
         }
 
         public String Mostrar()
