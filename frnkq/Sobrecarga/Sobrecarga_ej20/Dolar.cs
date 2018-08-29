@@ -97,7 +97,12 @@ namespace Sobrecarga_ej20
         {
             return d.cantidad - p.GetCantidad() * inPesos;
         }
-        public static Dolar operator +(Dolar d, Euro e) { }
-        public static Dolar operator -(Dolar d, Euro e) { }
+        public static Dolar operator +(Dolar d, Euro e) {
+            return d.cantidad + e.GetCantidad() * inEuros;
+        }
+        public static Dolar operator -(Dolar d, Euro e)
+        {
+            return d.cantidad + e.GetCantidad() * inEuros;
+        }
     }
 }
