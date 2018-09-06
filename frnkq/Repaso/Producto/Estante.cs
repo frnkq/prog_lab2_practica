@@ -27,12 +27,15 @@ namespace Producto
         
         public static string MostrarEstante(Estante e)
         {
-            string productos = "";
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine(string.Format("Estante ubicacion: {0} productos: ", e.ubicacionEstante));
             foreach(Producto p in e.GetProductos())
             {
-                productos+= Producto.MostrarProducto(p);
+                sb.Append(Producto.MostrarProducto(p));
             }
-            return "Estante ubicacion " + e.ubicacionEstante+" productos: "+productos;
+
+            return sb.ToString();
         }
 
         public static bool operator ==(Estante e, Producto p)

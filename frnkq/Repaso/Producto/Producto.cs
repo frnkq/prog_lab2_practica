@@ -22,13 +22,14 @@ namespace Producto
 
         public static string MostrarProducto(Producto p)
         {
-            return "Producto cod: "+(string)p+" marca: " + p.GetMarca() + " precio: " + p.GetPrecio();
+            string str = string.Format("    |----Producto cod: {0} marca: {1} precio: {2}", (string)p, p.GetMarca(), p.GetPrecio());
+            return new StringBuilder().AppendLine(str).ToString();
         }
 
         /**OPERATORS**/
         public static explicit operator string(Producto p)
         {
-            return "";// p.codigoDeBarra;
+            return p.codigoDeBarra;
         }
 
         public static bool operator ==(Producto p, string marca)
