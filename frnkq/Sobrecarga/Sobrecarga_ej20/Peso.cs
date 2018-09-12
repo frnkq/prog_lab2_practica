@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sobrecarga_ej20
 {
-    class Peso 
+    public class Peso 
     {
         public static double inDolars = 0.0569;
         public static double inEuros = 0.0777;
