@@ -40,6 +40,7 @@
             this.rtxtTextBox.Size = new System.Drawing.Size(675, 244);
             this.rtxtTextBox.TabIndex = 0;
             this.rtxtTextBox.Text = "";
+            this.rtxtTextBox.TextChanged += new System.EventHandler(this.rtxtTextBox_TextChanged);
             // 
             // btnContar
             // 

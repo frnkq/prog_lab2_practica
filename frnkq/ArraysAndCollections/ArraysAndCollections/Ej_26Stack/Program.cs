@@ -21,14 +21,28 @@ namespace Ej_26Stack
                 else
                     i--;
             }
-            int length = numbers.Count;
-            int min, max;
-            max = (int)numbers.Peek();
-            min = max;
-            for(int i = 0; i < length; i++){
-                Console.WriteLine("" + numbers.Pop());
+
+            object[] myArray = numbers.ToArray();
+            Array.Sort(myArray);
+
+
+            Stack positiveStacks = new Stack();
+            Stack negativeStacks = new Stack();
+            int myvar = 0;
+           for(int i=0;i<myArray.Length / 2; i++)
+            {
+                positiveStacks.Push(myArray[i]);
             }
-            Console.ReadLine();
+
+
+            int length = numbers.Count;
+            for (int i = 0; i < positiveStacks.Count; i++)
+                Console.WriteLine("asd" + positiveStacks.Pop());
+            for (int i = 0; i < negativeStacks.Count; i++)
+                //Console.WriteLine("" + positiveStacks.Pop());
+
+
+            Console.ReadKey();
         }
     }
 }
