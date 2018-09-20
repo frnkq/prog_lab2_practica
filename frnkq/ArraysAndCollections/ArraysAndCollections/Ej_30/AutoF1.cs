@@ -22,7 +22,17 @@ namespace Ej_30
 
         public string MostrarDatos()
         {
-            return (String.Format("");
+            return (String.Format("Cant combustible{0}"));
+        }
+
+        public static bool operator !=(AutoF1 a1, AutoF1 a2)
+        {
+            return !(a1==a2);
+        }
+
+        public static bool operator ==(AutoF1 a1, AutoF1 a2)
+        {
+            return (String.Compare(a1.escuderia, a2.escuderia) == 0) ? true : false;
         }
     }
 }

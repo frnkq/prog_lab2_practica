@@ -14,6 +14,54 @@ namespace Ej_29
         private float promedioGoles;
         private int totalGoles;
 
+        public long Dni
+        {
+            get
+            {
+                return this.dni;
+            }
+            set
+            {
+                this.dni = value;
+            }
+        }
+
+        public string Nombre
+        {
+            get
+            {
+                return this.nombre;
+            }
+            set
+            {
+                this.nombre = value;
+            }
+        }
+
+        public int PartidosJugados
+        {
+            get
+            {
+                return this.partidosJugados;
+            }
+        }
+
+        public double PromedioGoles
+        {
+            get
+            {
+                return (this.PartidosJugados == 0) ? 0 : (this.TotalGoles / this.PartidosJugados);
+            }
+        }
+
+        public double TotalGoles
+        {
+            get
+            {
+                return this.totalGoles;
+            }
+        }
+
         private Jugador()
         {
             this.partidosJugados = 0;
@@ -35,16 +83,11 @@ namespace Ej_29
 
         }
 
-        public float GetPromedioGoles()
-        {
-            return (this.partidosJugados == 0) ? 0 : (this.totalGoles / this.partidosJugados);
-        }
-
         public string MostrarDatos()
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(String.Format("Jugador {0}, Dni: {1}, Total goles: {2} partidos jugados: {3} promedio g/p: {4}",
-                                        this.nombre, this.dni, this.totalGoles, this.partidosJugados, this.GetPromedioGoles()));
+                                        this.Nombre, this.Dni, this.TotalGoles, this.PartidosJugados, this.PromedioGoles ));
             return sb.ToString(); ;
         }
 

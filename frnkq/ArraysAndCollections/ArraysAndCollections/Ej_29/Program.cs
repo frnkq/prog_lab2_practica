@@ -22,9 +22,13 @@ namespace Ej_29
             Jugador diez = new Jugador(10, "Federico", 150, 3);
             Jugador once = new Jugador(145, "Matias", 150, 3);
             Jugador doce = new Jugador(22, "Hernan", 84, 14);
+            Jugador trece = new Jugador(22, "Hernan", 84, 14);
+            Jugador catorce  = new Jugador(22, "Hernan", 84, 14);
+
 
             Equipo miEquipo = new Equipo(11, "River");
-            bool foo = miEquipo + uno;
+            bool foo;
+            foo = miEquipo + uno;
             foo = miEquipo + dos;
             foo = miEquipo + tres;
             foo = miEquipo + cuatro;
@@ -43,7 +47,7 @@ namespace Ej_29
             {
                 Console.WriteLine(j.MostrarDatos());
             }
-
+            Console.WriteLine("Cantidad de jugadores: " + miEquipo.jugadores.Count);
             Console.ReadKey();
         }
     }
