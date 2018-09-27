@@ -8,24 +8,19 @@ namespace CentralitaHerencia
 {
     public class Provincial : Llamada
     {
-        #region Fields
+        /**Fields**/
         protected Franja franjaHoraria;
-        #endregion
 
-        #region Properties
-        /// <summary>
-        /// Read Only. Retorna el costo de la llamada utilizando el metodo CalcularCosto()
-        /// </summary>
-        public override float CostoLlamada
+        /**Properties**/
+        public float CostoLlamada
         {
             get
             {
                 return this.CalcularCosto();
             }
         }
-        #endregion
 
-        #region Constructors
+        /**Constructors**/
         public Provincial(Franja miFranja, Llamada llamada) : base(llamada.Duracion, llamada.NroDestino, llamada.NroOrigen)
         {
             this.franjaHoraria = miFranja;
@@ -35,16 +30,14 @@ namespace CentralitaHerencia
         {
             this.franjaHoraria = miFranja;
         }
-        #endregion
 
-
-        #region Methods
-
-        /// <summary>
+        /**Public methods**/
+       
+            /// <summary>
         /// Recopila información de la llamada en un string, utilizando el metodo Mostrar() de llamada y agregando los campos locales
         /// </summary>
         /// <returns>informacion de la llamada</returns>
-        protected override string Mostrar()
+        public string Mostrar()
         {
             StringBuilder datosProvincial = new StringBuilder();
             datosProvincial.Append(base.Mostrar());
@@ -52,14 +45,9 @@ namespace CentralitaHerencia
 
             return datosProvincial.ToString();
         }
-        /// <summary>
-        /// Recopila informacion de la llamada utilizando el metodo Mostrar
-        /// </summary>
-        /// <returns>Informacion de la llamada</returns>
-        public override string ToString()
-        {
-            return this.Mostrar();
-        }
+
+
+        /**Private methods**/
 
         /// <summary>
         /// Calcula el costo de la llamada dependiendo su franja horaria
@@ -86,14 +74,6 @@ namespace CentralitaHerencia
             }
         }
 
-
-        public override bool Equals(object obj)
-        {
-            return obj is Provincial;
-        }
-        #endregion
-
-        #region Enums
         //Enumerado de las distintas franjas horarias
         public enum Franja
         {
@@ -101,6 +81,5 @@ namespace CentralitaHerencia
             Franja_2,
             Franja_3
         }
-        #endregion
     }
 }

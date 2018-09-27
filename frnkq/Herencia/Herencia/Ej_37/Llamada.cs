@@ -6,14 +6,18 @@ using System.Threading.Tasks;
 
 namespace CentralitaHerencia
 {
-    public class Llamada
+    public abstract class Llamada
     {
-        /**Fields**/
+        #region Fields
         protected float duracion;
         protected string nroDestino;
         protected string nroOrigen;
+        #endregion
 
-        /**Properties**/
+        #region Properties
+        /// <summary>
+        /// Read only. Retorna la duracion de la llamada.
+        /// </summary>
         public float Duracion
         {
             get
@@ -22,6 +26,9 @@ namespace CentralitaHerencia
             }
         }
 
+        /// <summary>
+        /// Read only. Retorna el numero de destino de la llamada.
+        /// </summary>
         public string NroDestino
         {
             get
@@ -30,6 +37,9 @@ namespace CentralitaHerencia
             }
         }
 
+        /// <summary>
+        /// Read only. Retorna el numero de origen de la llamada.
+        /// </summary>
         public string NroOrigen
         {
             get
@@ -38,16 +48,23 @@ namespace CentralitaHerencia
             }
         }
 
-        /**Constructors**/
+        /// <summary>
+        /// Abstract. Read only.
+        /// </summary>
+        public abstract float CostoLlamada { get;  }
+        #endregion
+
+        #region Constructors
         public Llamada(float duracion, string nroDestino, string nroOrigen)
         {
             this.duracion = duracion;
             this.nroDestino = nroDestino;
             this.nroOrigen = nroOrigen;
         }
+        #endregion
 
-        /**Public methods**/
-        public string Mostrar()
+        #region Methods
+        protected virtual string Mostrar()
         {
 
             StringBuilder datosLlamada = new StringBuilder();
@@ -69,13 +86,46 @@ namespace CentralitaHerencia
 
             return 0;
         }
+        #endregion
 
-        
+        #region Operators
+        /// <summary>
+        /// Compara la igualdad de dos llamadas, segun el tipo, numero de origen y numero de destino
+        /// </summary>
+        /// <param name="ll1">Primera llamada a analizar</param>
+        /// <param name="ll2">Segunda llamada a analizar</param>
+        /// <returns>True si son iguales el tipo, numero de origen y numero de destino.
+        /// False si algun parametro no es igual</returns>
+        public static bool operator ==(Llamada ll1, Llamada ll2)
+        {
+            if (ll1.Equals(ll2) && 
+                ll1.NroOrigen == ll2.NroOrigen && 
+                ll1.NroDestino == ll2.NroDestino )
+                 return true;
+
+            return false;
+        }
+
+        /// <summary>
+        /// Compara la igualdad de dos llamadas, segun el tipo, numero de origen y numero de destino
+        /// </summary>
+        /// <param name="ll1">Primera llamada a analizar</param>
+        /// <param name="ll2">Segunda llamada a analizar</param>
+        /// <returns>False si son iguales el tipo, numero de origen y numero de destino.
+        /// True si algun parametro no es igual</returns>
+        public static bool operator !=(Llamada ll1, Llamada ll2)
+        {
+            return !(ll1 == ll2);
+        }
+        #endregion
+
+        #region Enums
         public enum TipoLlamada
         {
             Local,
             Provincial,
             Todas
         }
+        #endregion
     }
 }

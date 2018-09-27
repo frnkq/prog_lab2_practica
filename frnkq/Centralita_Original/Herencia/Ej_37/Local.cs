@@ -8,24 +8,19 @@ namespace CentralitaHerencia
 {
     public class Local : Llamada
     {
-        #region Fields
+        /**Fields**/
         protected float costo;
-        #endregion
 
-        #region Properties
-        /// <summary>
-        /// Read Only. Retorna el costo de la llamada calculado con el metodo CalcularCosto()
-        /// </summary>
-        public override float CostoLlamada
+        /**Properties**/
+        public float CostoLlamada
         {
             get
             {
                 return this.CalcularCosto();
             }
         }
-        #endregion
-
-        #region Constructors
+        
+        /**Constructors**/
         public Local(Llamada llamada, float costo) : base(llamada.Duracion, llamada.NroDestino, llamada.NroOrigen)
         {
             this.costo = costo;
@@ -34,15 +29,16 @@ namespace CentralitaHerencia
         {
             this.costo = costo;
         }
-        #endregion
 
 
-        #region Methods
+        /**Public methods**/
+
+
         /// <summary>
         /// Recopila información de la llamada en un string, utilizando el metodo Mostrar() de llamada y agregando los campos locales
         /// </summary>
         /// <returns>informacion de la llamada</returns>
-        protected override string Mostrar()
+        public string Mostrar()
         {
             StringBuilder datosLocal = new StringBuilder();
             datosLocal.Append(base.Mostrar());
@@ -50,24 +46,8 @@ namespace CentralitaHerencia
 
             return datosLocal.ToString();
         }
-        /// <summary>
-        /// Recopila informacion de la llamada utilizando el metodo Mostrar
-        /// </summary>
-        /// <returns>Informacion de la llamada</returns>
-        public override string ToString()
-        {
-            return this.Mostrar();
-        }
-        /// <summary>
-        /// Analiza si un objeto es del tipo Local
-        /// </summary>
-        /// <param name="obj">Objeto a comparar</param>
-        /// <returns>True si el objeto es del tipo local</returns>
-        public override bool Equals(object obj)
-        {
-            return obj is Local;
-        }
 
+        /**Private methods**/
 
         /// <summary>
         /// Calcula el costo de la llamada multiplicando la duración por el costo de la misma
@@ -77,7 +57,5 @@ namespace CentralitaHerencia
         {
             return this.costo * this.duracion;
         }
-        #endregion
-
     }
 }

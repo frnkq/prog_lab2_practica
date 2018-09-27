@@ -8,15 +8,12 @@ namespace CentralitaHerencia
 {
     public class Centralita
     {
-        #region Fields
+        /**Fields**/
         private List<Llamada> listaDeLlamadas;
         private string razonSocial;
-        #endregion
 
-        #region Properties
-        /// <summary>
-        /// Read only. Calcula las ganancias por llamadas locales
-        /// </summary>
+
+        /**Properties**/
         public float GananciasPorLocal
         {
             get
@@ -24,9 +21,7 @@ namespace CentralitaHerencia
                 return this.CalcularGanancia(Llamada.TipoLlamada.Local);
             }
         }
-        /// <summary>
-        /// Read only. Calcula las ganancias por llamadas provinciales
-        /// </summary>
+
         public float GananciasPorProvincial
         {
             get
@@ -35,9 +30,6 @@ namespace CentralitaHerencia
             }
         }
 
-        /// <summary>
-        /// Read only. Calcula las ganancias por todas las llamadas.
-        /// </summary>
         public float GananciasPorTotal
         {
             get
@@ -46,9 +38,6 @@ namespace CentralitaHerencia
             }
         }
 
-        /// <summary>
-        /// Read only. Retorna la lista de llamadas
-        /// </summary>
         public List<Llamada> Llamadas
         {
             get
@@ -56,9 +45,10 @@ namespace CentralitaHerencia
                 return this.listaDeLlamadas;
             }
         }
-        #endregion
 
-        #region Constructors
+        /**Constructors**/
+
+
         public Centralita()
         {
             this.listaDeLlamadas = new List<Llamada>();
@@ -68,14 +58,11 @@ namespace CentralitaHerencia
         {
             this.razonSocial = nombreEmrpesa;
         }
-        #endregion
 
-        #region Methods
-        /// <summary>
-        /// Recopila informacion de la centralita
-        /// </summary>
-        /// <returns>Información de la centralita</returns>
-        public override string ToString()
+        /**Public methods**/
+
+
+        public string Mostrar()
         {
             StringBuilder datosCentralita = new StringBuilder();
             datosCentralita.AppendLine("CENTRALITA: " + this.razonSocial);
@@ -84,18 +71,9 @@ namespace CentralitaHerencia
             datosCentralita.AppendLine("Gancancia por local: " + this.GananciasPorLocal);
             datosCentralita.AppendLine("Detalle de las llamadas");
             foreach (Llamada llamada in this.listaDeLlamadas)
-                datosCentralita.Append(llamada.ToString());
+                datosCentralita.Append(llamada.Mostrar());
 
             return datosCentralita.ToString();
-        }
-
-        /// <summary>
-        /// Agrega una llamada a la lista de llamadas
-        /// </summary>
-        /// <param name="nuevaLlamada">Nueva llamada a agregar</param>
-        private void AgregarLlamada(Llamada nuevaLlamada)
-        {
-            this.Llamadas.Add(nuevaLlamada);
         }
 
         /// <summary>
@@ -105,6 +83,8 @@ namespace CentralitaHerencia
         {
             this.listaDeLlamadas.Sort(Llamada.OrdenarPorDuracion);
         }
+
+        /**Private methods**/
 
         /// <summary>
         /// Calcula los distintos totales de ganancia (ganancia por llamadas locales, ganancia por llamadas provinciales y ganancia total)
@@ -147,52 +127,5 @@ namespace CentralitaHerencia
 
             return ganancia;
         }
-        #endregion
-
-        #region Operators
-
-        /// <summary>
-        /// Analiza si una llamada existe en la lista de llamadas de la centrfalita utilizando
-        /// el operador == de llamada
-        /// </summary>
-        /// <param name="c">Centralita a analizar</param>
-        /// <param name="llamada">Llamada a verificar si existe en la lista de llamadas</param>
-        /// <returns>True si la llamada existe en la lista de llamadas, false si no existe</returns>
-        public static bool operator ==(Centralita c, Llamada llamada)
-        {
-            foreach(Llamada ll in c.Llamadas)
-            {
-                if (ll == llamada)
-                    return true;
-            }
-
-            return false;
-        }
-        /// <summary>
-        /// Analiza si una llamada existe en la lista de llamadas de la centrfalita utilizando
-        /// el operador == de llamada
-        /// </summary>
-        /// <param name="c">Centralita a analizar</param>
-        /// <param name="llamada">Llamada a verificar si existe en la lista de llamadas</param>
-        /// <returns>False si la llamada existe en la lista de llamadas, true si no existe</returns>
-        public static bool operator !=(Centralita c, Llamada llamada)
-        {
-            return !(c == llamada);
-        }
-        /// <summary>
-        /// Agrega una llamada a la lista de llamadas de la centralita solo si esta no existe,
-        /// tal verificacion se hace utilizando el operador == de Centralita
-        /// </summary>
-        /// <param name="c">Centralita a analizar</param>
-        /// <param name="nuevaLlamada">Llamada a agregar en caso de no existir</param>
-        /// <returns>Centralita c</returns>
-        public static Centralita operator +(Centralita c, Llamada nuevaLlamada)
-        {
-            if (c != nuevaLlamada)
-                c.AgregarLlamada(nuevaLlamada);
-
-            return c;
-        }
-        #endregion
     }
 }
