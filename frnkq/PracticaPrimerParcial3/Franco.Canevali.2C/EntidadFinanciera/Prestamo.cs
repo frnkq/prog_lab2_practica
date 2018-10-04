@@ -87,7 +87,7 @@ namespace PrestamosPersonales
         /// 1 si la fechad de vencimiento del primer producto es posterior a la del segundo
         /// -1 si la fecha de vencimiento del primer producto es anterior a la del segundo
         /// </returns>
-        public int OrdenarPorFecha(Prestamo p1, Prestamo p2)
+        public static int OrdenarPorFecha(Prestamo p1, Prestamo p2)
         {
             if (p1.Vencimiento == p2.Vencimiento)
                 return 0;

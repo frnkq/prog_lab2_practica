@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntidadFinanciera
+namespace testing
 {
-    class Financierfa
+    class Program
     {
+        static void Main(string[] args)
+        {
+        }
     }
 }

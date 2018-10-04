@@ -70,10 +70,10 @@ namespace PrestamosPersonales
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
-
             sb.AppendLine(base.Mostrar());
+            sb.AppendLine("Tipo: dolares");
             sb.AppendLine(String.Format("Interes: {0}", this.Interes));
-
+            sb.AppendLine("---------");
             return sb.ToString();
         }
 
