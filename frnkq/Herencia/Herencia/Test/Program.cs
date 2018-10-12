@@ -21,14 +21,62 @@ namespace Test
 
             // Las llamadas se irán registrando en la Centralita.
             // La centralita mostrará por pantalla todas las llamadas según las vaya registrando.
-            c = c + l1;
-            c += l2;
-            c += l3;
-            c += l4;
+            
+                
+            try
+            {
+                c = c + l1;
+            }
+            catch (CentralitaException e)
+            {
+                Console.WriteLine("!!!!!!!!!!!!!!!!!!!!!!");
+                Console.WriteLine(e.Message);
+                Console.WriteLine(l1.ToString());
+                Console.WriteLine("!!!!!!!!!!!!!!!!!!!!!!");
+
+            }
+
+            try
+            {
+                c += l2;
+            }
+            catch (CentralitaException e)
+            {
+                Console.WriteLine("!!!!!!!!!!!!!!!!!!!!!!");
+                Console.WriteLine(e.Message);
+                Console.WriteLine(l2.ToString());
+                Console.WriteLine("!!!!!!!!!!!!!!!!!!!!!!");
+            }
+
+            try
+            {
+                c += l3;
+            }
+            catch (CentralitaException e)
+            {
+                Console.WriteLine("!!!!!!!!!!!!!!!!!!!!!!");
+                Console.WriteLine(e.Message);
+                Console.WriteLine(l3.ToString());
+                Console.WriteLine("!!!!!!!!!!!!!!!!!!!!!!");
+            }
+
+            try
+            {
+                c += l4;
+            }
+            catch (CentralitaException e)
+            {
+                Console.WriteLine("!!!!!!!!!!!!!!!!!!!!!!");
+                Console.WriteLine(e.Message);
+                Console.WriteLine(l4.ToString());
+                Console.WriteLine("!!!!!!!!!!!!!!!!!!!!!!");
+                Console.WriteLine();
+            }
+
+        
 
             c.OrdenarLlamadas();
-            Console.WriteLine(c.ToString());
-            
+            Console.WriteLine(c.ToString());            
             Console.ReadKey();
         }
     }

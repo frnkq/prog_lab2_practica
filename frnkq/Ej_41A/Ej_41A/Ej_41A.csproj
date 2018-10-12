@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2E679961-8AC4-46AF-94B9-0387B1656A17}</ProjectGuid>
+    <ProjectGuid>{C58DF6EF-6B63-4F0D-A32C-28F4002BC08C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CentralitaHerencia</RootNamespace>
-    <AssemblyName>CentralitaHerencia</AssemblyName>
+    <RootNamespace>Ej_41A</RootNamespace>
+    <AssemblyName>Ej_41A</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,13 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Centralita.cs" />
-    <Compile Include="CentralitaException.cs" />
-    <Compile Include="Llamada.cs" />
-    <Compile Include="Local.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Provincial.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

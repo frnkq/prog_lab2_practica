@@ -190,6 +190,8 @@ namespace CentralitaHerencia
         {
             if (c != nuevaLlamada)
                 c.AgregarLlamada(nuevaLlamada);
+            else
+                throw new CentralitaException("Error: La llamada ya se encuentra registrada");
 
             return c;
         }
