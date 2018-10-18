@@ -128,7 +128,15 @@ namespace CentralTelefonica
             else
             {
                 Local llamada = new Local(nroOrigen, randDuracion, nroDestino, randCosto);
-                this.centralita += llamada;
+                try
+                {
+                    this.centralita += llamada;
+                }
+                catch(CentralitaException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                
             }
 
             this.txtNumeroDestino.Clear();

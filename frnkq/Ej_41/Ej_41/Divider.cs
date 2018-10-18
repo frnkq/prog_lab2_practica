@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Ej_41
 {
-    class Divider
+    public class Divider
     {
+        private int number;
+        private string something;
+
         public static string GetStack(Exception ex)
         {
             StringBuilder sb = new StringBuilder();
@@ -73,7 +76,7 @@ namespace Ej_41
         {
             try
             {
-                new Divider(5);
+                new Divider(number);
             }
             catch(UnaExcepcion e)
             {

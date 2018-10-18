@@ -15,7 +15,6 @@ namespace Ej_41
         public MiException(string message) : base(message)
         {
         }
-
         public MiException(string message, Exception inner) : base(message, inner)
         {
         }

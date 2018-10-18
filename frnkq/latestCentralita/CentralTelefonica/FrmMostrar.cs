@@ -49,34 +49,35 @@ namespace CentralTelefonica
                         break;
 
                     case Llamada.TipoLlamada.Provincial:
-                     
+
                         break;
 
                     case Llamada.TipoLlamada.Todas:
-                       
+
                         break;
                 }
 
-            switch (this.tipoLlamada)
-            {
-                case Llamada.TipoLlamada.Local:
-                    sb.AppendLine(String.Format("Ganancias por llamadas locales {0}",
-                        LaCentralita.GananciasPorLocal));
-                    break;
+                switch (this.tipoLlamada)
+                {
+                    case Llamada.TipoLlamada.Local:
+                        sb.AppendLine(String.Format("Ganancias por llamadas locales {0}",
+                            LaCentralita.GananciasPorLocal));
+                        break;
 
-                case Llamada.TipoLlamada.Provincial:
-                    sb.AppendLine(String.Format("Ganancias por llamadas provinciales {0}",
-                       LaCentralita.GananciasPorProvincial));
-                    break;
+                    case Llamada.TipoLlamada.Provincial:
+                        sb.AppendLine(String.Format("Ganancias por llamadas provinciales {0}",
+                           LaCentralita.GananciasPorProvincial));
+                        break;
 
-                case Llamada.TipoLlamada.Todas:
-                    sb.AppendLine(String.Format("Ganancias por llamadas totales {0}",
-                       LaCentralita.GananciasPorTotal));
-                    break;
+                    case Llamada.TipoLlamada.Todas:
+                        sb.AppendLine(String.Format("Ganancias por llamadas totales {0}",
+                           LaCentralita.GananciasPorTotal));
+                        break;
+                }
+                sb.AppendLine(LaCentralita.ToString());
+
+                this.rtxtDatos.Text = sb.ToString();
             }
-            sb.AppendLine(LaCentralita.ToString());
-
-            this.rtxtDatos.Text = sb.ToString();
         }
     }
 }
