@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.IO;
 namespace CentralitaHerencia
 {
-    public class Centralita
+    public class Centralita : IGuardar<string>
     {
         #region Fields
         private List<Llamada> listaDeLlamadas;
@@ -55,6 +55,12 @@ namespace CentralitaHerencia
             {
                 return this.listaDeLlamadas;
             }
+        }
+
+        public string RutaDeArchivo
+        {
+            get;
+            set;
         }
         #endregion
 
@@ -147,6 +153,55 @@ namespace CentralitaHerencia
 
             return ganancia;
         }
+
+        /// <summary>
+        /// Genera un log de la centralita
+        /// Dia dd de month de yyyy hh:hh hs se realizo una llamada
+        /// </summary>
+        /// <returns></returns>
+        public bool Guardar()
+        {
+            string filePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) +
+                              "\\" +
+                              "CentralitaLog.txt";
+            try
+            {
+                StreamWriter sw = new StreamWriter(filePath, true);
+                sw.WriteLine(String.Format("{0} {1} de {2} de {3} {4}:{5}hs - Se realizó una llamada",
+                              DateTime.Now.DayOfWeek.ToString(), DateTime.Now.Day.ToString(),
+                              DateTime.Now.Month.ToString(), DateTime.Now.Year.ToString(),
+                              DateTime.Now.Hour.ToString(), DateTime.Now.Minute.ToString()));
+                sw.Close();
+            }catch(Exception e)
+            {
+                throw e;
+            }
+            
+            return true;
+        }
+
+        public string Leer()
+        {
+            string filePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) +
+                               "\\" +
+                               "CentralitaLog.txt";
+            string data;
+
+            StreamReader sr = new StreamReader(filePath);
+            try
+            {
+                data = sr.ReadToEnd();
+                sr.Close();
+                return data;
+            }catch(Exception e)
+            {
+                throw e;
+            }
+            
+
+
+            throw new NotImplementedException();
+        }
         #endregion
 
         #region Operators
@@ -189,9 +244,22 @@ namespace CentralitaHerencia
         public static Centralita operator +(Centralita c, Llamada nuevaLlamada)
         {
             if (c != nuevaLlamada)
+            {
                 c.AgregarLlamada(nuevaLlamada);
+                try
+                {
+                    c.Guardar();
+                }catch(Exception e)
+                {
+                    throw new FallaLogException("Error al guardar log :(");
+                }
+
+            }
             else
+            {
                 throw new CentralitaException("Error: La llamada ya se encuentra registrada");
+            }
+                
 
             return c;
         }

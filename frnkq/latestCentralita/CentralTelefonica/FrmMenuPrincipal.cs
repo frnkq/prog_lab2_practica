@@ -49,5 +49,12 @@ namespace CentralTelefonica
             FrmMostrar mostrar = new FrmMostrar(this.centralita, Llamada.TipoLlamada.Provincial);
             mostrar.ShowDialog();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(this.centralita.Leer());
+            this.Close();
+            
+        }
     }
 }

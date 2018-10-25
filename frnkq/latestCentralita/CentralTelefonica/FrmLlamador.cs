@@ -136,6 +136,10 @@ namespace CentralTelefonica
                 {
                     MessageBox.Show(ex.Message);
                 }
+                catch(FallaLogException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
                 
             }
 

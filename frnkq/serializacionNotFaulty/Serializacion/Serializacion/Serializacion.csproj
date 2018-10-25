@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2E679961-8AC4-46AF-94B9-0387B1656A17}</ProjectGuid>
+    <ProjectGuid>{50F5093B-FE9E-412D-A5F8-21846F790A83}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CentralitaHerencia</RootNamespace>
-    <AssemblyName>CentralitaHerencia</AssemblyName>
+    <RootNamespace>Serializacion</RootNamespace>
+    <AssemblyName>Serializacion</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,15 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Centralita.cs" />
-    <Compile Include="CentralitaException.cs" />
-    <Compile Include="FallaLogException.cs" />
-    <Compile Include="IGuardar.cs" />
-    <Compile Include="Llamada.cs" />
-    <Compile Include="Local.cs" />
+    <Compile Include="Persona.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Provincial.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

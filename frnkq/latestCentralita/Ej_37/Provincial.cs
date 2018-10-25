@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CentralitaHerencia
 {
-    public class Provincial : Llamada
+    public class Provincial : Llamada, IGuardar<Provincial>
     {
         #region Fields
         protected Franja franjaHoraria;
@@ -22,6 +22,12 @@ namespace CentralitaHerencia
             {
                 return this.CalcularCosto();
             }
+        }
+
+        public string RutaDeArchivo
+        {
+            get;
+            set;
         }
         #endregion
 
@@ -90,6 +96,17 @@ namespace CentralitaHerencia
         public override bool Equals(object obj)
         {
             return obj is Provincial;
+        }
+
+
+        public bool Guardar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Provincial Leer()
+        {
+            throw new NotImplementedException();
         }
         #endregion
 
