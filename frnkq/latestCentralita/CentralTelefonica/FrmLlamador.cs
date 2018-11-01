@@ -124,6 +124,7 @@ namespace CentralTelefonica
             {
                 Provincial llamada = new Provincial(nroOrigen, franja, randDuracion, nroDestino);
                 this.centralita += llamada;
+                llamada.Guardar();
             }
             else
             {
@@ -131,6 +132,7 @@ namespace CentralTelefonica
                 try
                 {
                     this.centralita += llamada;
+                    llamada.Guardar();
                 }
                 catch(CentralitaException ex)
                 {

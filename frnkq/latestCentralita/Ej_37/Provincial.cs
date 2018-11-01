@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.IO;
+using System.Xml;
+using System.Xml.Serialization;
 namespace CentralitaHerencia
 {
+    [Serializable]
     public class Provincial : Llamada, IGuardar<Provincial>
     {
         #region Fields
@@ -32,6 +35,10 @@ namespace CentralitaHerencia
         #endregion
 
         #region Constructors
+        public Provincial() : base((float)32.3, "123123", "456456")
+        {
+
+        }
         public Provincial(Franja miFranja, Llamada llamada) : base(llamada.Duracion, llamada.NroDestino, llamada.NroOrigen)
         {
             this.franjaHoraria = miFranja;
@@ -101,12 +108,48 @@ namespace CentralitaHerencia
 
         public bool Guardar()
         {
-            throw new NotImplementedException();
+            string fileName = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) +
+                            "\\provincial.cs";
+            XmlSerializer serializer = new XmlSerializer(typeof(Provincial));
+            XmlWriter xmlWriter = XmlWriter.Create(fileName);
+            try
+            {
+                serializer.Serialize(xmlWriter, this);
+                return true;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                xmlWriter.Close();
+            }
         }
 
         public Provincial Leer()
         {
-            throw new NotImplementedException();
+            string fileName = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) +
+                            "\\local.bin";
+            XmlReader xmlReader = XmlReader.Create(fileName);
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(Provincial));
+            Object aux;
+            try
+            {
+                aux = xmlSerializer.Deserialize(xmlReader);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                xmlReader.Close();
+            }
+            if (aux is Provincial)
+                return (Provincial)aux;
+            else
+                throw new InvalidCastException();
         }
         #endregion
 
