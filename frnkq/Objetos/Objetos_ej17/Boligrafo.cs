@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Objetos_ej17_pens
 {
-    class Boligrafo
+    public class Boligrafo
     {
         private const short cantidadTintaMaxima = 100;
         private ConsoleColor color;
