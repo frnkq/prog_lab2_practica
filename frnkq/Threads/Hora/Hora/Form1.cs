@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+
 namespace Hora
 {
     public partial class Form1 : Form
@@ -19,14 +20,13 @@ namespace Hora
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            TimerCallback timerDelegate = new TimerCallback(AsignarHora);
-            System.Threading.Timer timer = new System.Threading.Timer(timerDelegate, DateTime.Now, 0, 1000);
+            System.Threading.Timer t = new System.Threading.Timer(AsignarHora, null, 0, 1000);
 
         }
 
         private void AsignarHora(Object time)
         {
-            DateTime now = (DateTime)time;
+            DateTime now = DateTime.Now;
             string rightnow = now.Day.ToString() + "/" + now.Month.ToString() +
                                 "/" + now.Year.ToString() +
                                 " " + now.Hour.ToString() +
