@@ -20,10 +20,20 @@ namespace Hora
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            System.Threading.Timer t = new System.Threading.Timer(AsignarHora, null, 0, 1000);
+            ///System.Threading.Timer t = new System.Threading.Timer(AsignarHora, null, 0, 1000);
 
+            Thread thread = new Thread(SomeThread);
+            thread.Start();
         }
+        private void SomeThread()
+        {
 
+           while(true)
+            {
+                AsignarHora(DateTime.Now);
+                System.Threading.Thread.Sleep(1000);
+            }
+        }
         private void AsignarHora(Object time)
         {
             DateTime now = DateTime.Now;

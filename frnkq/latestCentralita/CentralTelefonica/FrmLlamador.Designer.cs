@@ -30,23 +30,25 @@
         {
             this.txtNumeroDestino = new System.Windows.Forms.TextBox();
             this.grpPanel = new System.Windows.Forms.GroupBox();
+            this.btnDial3 = new System.Windows.Forms.Button();
+            this.btnDial4 = new System.Windows.Forms.Button();
+            this.btnDial5 = new System.Windows.Forms.Button();
+            this.btnDial6 = new System.Windows.Forms.Button();
+            this.btnDial7 = new System.Windows.Forms.Button();
+            this.btnDial8 = new System.Windows.Forms.Button();
+            this.btnDial9 = new System.Windows.Forms.Button();
+            this.btnDialAsterisc = new System.Windows.Forms.Button();
+            this.btnDial0 = new System.Windows.Forms.Button();
+            this.btnDialPound = new System.Windows.Forms.Button();
+            this.btnDial2 = new System.Windows.Forms.Button();
             this.btnDial1 = new System.Windows.Forms.Button();
             this.btnLlamar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.txtNumeroOrigen = new System.Windows.Forms.TextBox();
             this.cmbFranja = new System.Windows.Forms.ComboBox();
-            this.btnDial2 = new System.Windows.Forms.Button();
-            this.btnDialPound = new System.Windows.Forms.Button();
-            this.btnDial0 = new System.Windows.Forms.Button();
-            this.btnDialAsterisc = new System.Windows.Forms.Button();
-            this.btnDial9 = new System.Windows.Forms.Button();
-            this.btnDial8 = new System.Windows.Forms.Button();
-            this.btnDial7 = new System.Windows.Forms.Button();
-            this.btnDial6 = new System.Windows.Forms.Button();
-            this.btnDial5 = new System.Windows.Forms.Button();
-            this.btnDial4 = new System.Windows.Forms.Button();
-            this.btnDial3 = new System.Windows.Forms.Button();
+            this.btnGenerador = new System.Windows.Forms.Button();
+            this.btnListado = new System.Windows.Forms.Button();
             this.grpPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +82,127 @@
             this.grpPanel.TabStop = false;
             this.grpPanel.Text = "Panel";
             // 
+            // btnDial3
+            // 
+            this.btnDial3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.btnDial3.Location = new System.Drawing.Point(99, 16);
+            this.btnDial3.Name = "btnDial3";
+            this.btnDial3.Size = new System.Drawing.Size(42, 33);
+            this.btnDial3.TabIndex = 11;
+            this.btnDial3.Text = "3";
+            this.btnDial3.UseVisualStyleBackColor = true;
+            this.btnDial3.Click += new System.EventHandler(this.btnDial3_Click);
+            // 
+            // btnDial4
+            // 
+            this.btnDial4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.btnDial4.Location = new System.Drawing.Point(3, 55);
+            this.btnDial4.Name = "btnDial4";
+            this.btnDial4.Size = new System.Drawing.Size(42, 33);
+            this.btnDial4.TabIndex = 10;
+            this.btnDial4.Text = "4";
+            this.btnDial4.UseVisualStyleBackColor = true;
+            this.btnDial4.Click += new System.EventHandler(this.btnDial4_Click);
+            // 
+            // btnDial5
+            // 
+            this.btnDial5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.btnDial5.Location = new System.Drawing.Point(51, 55);
+            this.btnDial5.Name = "btnDial5";
+            this.btnDial5.Size = new System.Drawing.Size(42, 33);
+            this.btnDial5.TabIndex = 9;
+            this.btnDial5.Text = "5";
+            this.btnDial5.UseVisualStyleBackColor = true;
+            this.btnDial5.Click += new System.EventHandler(this.btnDial5_Click);
+            // 
+            // btnDial6
+            // 
+            this.btnDial6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.btnDial6.Location = new System.Drawing.Point(99, 55);
+            this.btnDial6.Name = "btnDial6";
+            this.btnDial6.Size = new System.Drawing.Size(42, 33);
+            this.btnDial6.TabIndex = 8;
+            this.btnDial6.Text = "6";
+            this.btnDial6.UseVisualStyleBackColor = true;
+            this.btnDial6.Click += new System.EventHandler(this.btnDial6_Click);
+            // 
+            // btnDial7
+            // 
+            this.btnDial7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.btnDial7.Location = new System.Drawing.Point(3, 94);
+            this.btnDial7.Name = "btnDial7";
+            this.btnDial7.Size = new System.Drawing.Size(42, 33);
+            this.btnDial7.TabIndex = 7;
+            this.btnDial7.Text = "7";
+            this.btnDial7.UseVisualStyleBackColor = true;
+            this.btnDial7.Click += new System.EventHandler(this.btnDial7_Click);
+            // 
+            // btnDial8
+            // 
+            this.btnDial8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.btnDial8.Location = new System.Drawing.Point(51, 94);
+            this.btnDial8.Name = "btnDial8";
+            this.btnDial8.Size = new System.Drawing.Size(42, 33);
+            this.btnDial8.TabIndex = 6;
+            this.btnDial8.Text = "8";
+            this.btnDial8.UseVisualStyleBackColor = true;
+            this.btnDial8.Click += new System.EventHandler(this.btnDial8_Click);
+            // 
+            // btnDial9
+            // 
+            this.btnDial9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.btnDial9.Location = new System.Drawing.Point(99, 94);
+            this.btnDial9.Name = "btnDial9";
+            this.btnDial9.Size = new System.Drawing.Size(42, 33);
+            this.btnDial9.TabIndex = 5;
+            this.btnDial9.Text = "9";
+            this.btnDial9.UseVisualStyleBackColor = true;
+            this.btnDial9.Click += new System.EventHandler(this.btnDial9_Click);
+            // 
+            // btnDialAsterisc
+            // 
+            this.btnDialAsterisc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.btnDialAsterisc.Location = new System.Drawing.Point(3, 133);
+            this.btnDialAsterisc.Name = "btnDialAsterisc";
+            this.btnDialAsterisc.Size = new System.Drawing.Size(42, 33);
+            this.btnDialAsterisc.TabIndex = 4;
+            this.btnDialAsterisc.Text = "*";
+            this.btnDialAsterisc.UseVisualStyleBackColor = true;
+            this.btnDialAsterisc.Click += new System.EventHandler(this.btnDialAsterisc_Click);
+            // 
+            // btnDial0
+            // 
+            this.btnDial0.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.btnDial0.Location = new System.Drawing.Point(51, 133);
+            this.btnDial0.Name = "btnDial0";
+            this.btnDial0.Size = new System.Drawing.Size(42, 33);
+            this.btnDial0.TabIndex = 3;
+            this.btnDial0.Text = "0";
+            this.btnDial0.UseVisualStyleBackColor = true;
+            this.btnDial0.Click += new System.EventHandler(this.btnDial0_Click);
+            // 
+            // btnDialPound
+            // 
+            this.btnDialPound.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.btnDialPound.Location = new System.Drawing.Point(99, 133);
+            this.btnDialPound.Name = "btnDialPound";
+            this.btnDialPound.Size = new System.Drawing.Size(42, 33);
+            this.btnDialPound.TabIndex = 2;
+            this.btnDialPound.Text = "#";
+            this.btnDialPound.UseVisualStyleBackColor = true;
+            this.btnDialPound.Click += new System.EventHandler(this.btnDialPound_Click);
+            // 
+            // btnDial2
+            // 
+            this.btnDial2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.btnDial2.Location = new System.Drawing.Point(51, 16);
+            this.btnDial2.Name = "btnDial2";
+            this.btnDial2.Size = new System.Drawing.Size(42, 33);
+            this.btnDial2.TabIndex = 1;
+            this.btnDial2.Text = "2";
+            this.btnDial2.UseVisualStyleBackColor = true;
+            this.btnDial2.Click += new System.EventHandler(this.btnDial2_Click);
+            // 
             // btnDial1
             // 
             this.btnDial1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
@@ -93,7 +216,7 @@
             // 
             // btnLlamar
             // 
-            this.btnLlamar.Location = new System.Drawing.Point(177, 72);
+            this.btnLlamar.Location = new System.Drawing.Point(177, 82);
             this.btnLlamar.Name = "btnLlamar";
             this.btnLlamar.Size = new System.Drawing.Size(92, 23);
             this.btnLlamar.TabIndex = 2;
@@ -113,7 +236,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(177, 189);
+            this.btnSalir.Location = new System.Drawing.Point(177, 221);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(92, 23);
             this.btnSalir.TabIndex = 4;
@@ -123,7 +246,7 @@
             // 
             // txtNumeroOrigen
             // 
-            this.txtNumeroOrigen.Location = new System.Drawing.Point(177, 150);
+            this.txtNumeroOrigen.Location = new System.Drawing.Point(177, 56);
             this.txtNumeroOrigen.Name = "txtNumeroOrigen";
             this.txtNumeroOrigen.Size = new System.Drawing.Size(92, 20);
             this.txtNumeroOrigen.TabIndex = 5;
@@ -136,132 +259,32 @@
             this.cmbFranja.Size = new System.Drawing.Size(254, 21);
             this.cmbFranja.TabIndex = 6;
             // 
-            // btnDial2
+            // btnGenerador
             // 
-            this.btnDial2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.btnDial2.Location = new System.Drawing.Point(51, 16);
-            this.btnDial2.Name = "btnDial2";
-            this.btnDial2.Size = new System.Drawing.Size(42, 33);
-            this.btnDial2.TabIndex = 1;
-            this.btnDial2.Text = "2";
-            this.btnDial2.UseVisualStyleBackColor = true;
-            this.btnDial2.Click += new System.EventHandler(this.btnDial2_Click);
+            this.btnGenerador.Location = new System.Drawing.Point(177, 150);
+            this.btnGenerador.Name = "btnGenerador";
+            this.btnGenerador.Size = new System.Drawing.Size(92, 23);
+            this.btnGenerador.TabIndex = 7;
+            this.btnGenerador.Text = "Generador";
+            this.btnGenerador.UseVisualStyleBackColor = true;
+            this.btnGenerador.Click += new System.EventHandler(this.btnGenerador_Click);
             // 
-            // btnDialPound
+            // btnListado
             // 
-            this.btnDialPound.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.btnDialPound.Location = new System.Drawing.Point(99, 133);
-            this.btnDialPound.Name = "btnDialPound";
-            this.btnDialPound.Size = new System.Drawing.Size(42, 33);
-            this.btnDialPound.TabIndex = 2;
-            this.btnDialPound.Text = "#";
-            this.btnDialPound.UseVisualStyleBackColor = true;
-            this.btnDialPound.Click += new System.EventHandler(this.btnDialPound_Click);
-            // 
-            // btnDial0
-            // 
-            this.btnDial0.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.btnDial0.Location = new System.Drawing.Point(51, 133);
-            this.btnDial0.Name = "btnDial0";
-            this.btnDial0.Size = new System.Drawing.Size(42, 33);
-            this.btnDial0.TabIndex = 3;
-            this.btnDial0.Text = "0";
-            this.btnDial0.UseVisualStyleBackColor = true;
-            this.btnDial0.Click += new System.EventHandler(this.btnDial0_Click);
-            // 
-            // btnDialAsterisc
-            // 
-            this.btnDialAsterisc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.btnDialAsterisc.Location = new System.Drawing.Point(3, 133);
-            this.btnDialAsterisc.Name = "btnDialAsterisc";
-            this.btnDialAsterisc.Size = new System.Drawing.Size(42, 33);
-            this.btnDialAsterisc.TabIndex = 4;
-            this.btnDialAsterisc.Text = "*";
-            this.btnDialAsterisc.UseVisualStyleBackColor = true;
-            this.btnDialAsterisc.Click += new System.EventHandler(this.btnDialAsterisc_Click);
-            // 
-            // btnDial9
-            // 
-            this.btnDial9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.btnDial9.Location = new System.Drawing.Point(99, 94);
-            this.btnDial9.Name = "btnDial9";
-            this.btnDial9.Size = new System.Drawing.Size(42, 33);
-            this.btnDial9.TabIndex = 5;
-            this.btnDial9.Text = "9";
-            this.btnDial9.UseVisualStyleBackColor = true;
-            this.btnDial9.Click += new System.EventHandler(this.btnDial9_Click);
-            // 
-            // btnDial8
-            // 
-            this.btnDial8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.btnDial8.Location = new System.Drawing.Point(51, 94);
-            this.btnDial8.Name = "btnDial8";
-            this.btnDial8.Size = new System.Drawing.Size(42, 33);
-            this.btnDial8.TabIndex = 6;
-            this.btnDial8.Text = "8";
-            this.btnDial8.UseVisualStyleBackColor = true;
-            this.btnDial8.Click += new System.EventHandler(this.btnDial8_Click);
-            // 
-            // btnDial7
-            // 
-            this.btnDial7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.btnDial7.Location = new System.Drawing.Point(3, 94);
-            this.btnDial7.Name = "btnDial7";
-            this.btnDial7.Size = new System.Drawing.Size(42, 33);
-            this.btnDial7.TabIndex = 7;
-            this.btnDial7.Text = "7";
-            this.btnDial7.UseVisualStyleBackColor = true;
-            this.btnDial7.Click += new System.EventHandler(this.btnDial7_Click);
-            // 
-            // btnDial6
-            // 
-            this.btnDial6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.btnDial6.Location = new System.Drawing.Point(99, 55);
-            this.btnDial6.Name = "btnDial6";
-            this.btnDial6.Size = new System.Drawing.Size(42, 33);
-            this.btnDial6.TabIndex = 8;
-            this.btnDial6.Text = "6";
-            this.btnDial6.UseVisualStyleBackColor = true;
-            this.btnDial6.Click += new System.EventHandler(this.btnDial6_Click);
-            // 
-            // btnDial5
-            // 
-            this.btnDial5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.btnDial5.Location = new System.Drawing.Point(51, 55);
-            this.btnDial5.Name = "btnDial5";
-            this.btnDial5.Size = new System.Drawing.Size(42, 33);
-            this.btnDial5.TabIndex = 9;
-            this.btnDial5.Text = "5";
-            this.btnDial5.UseVisualStyleBackColor = true;
-            this.btnDial5.Click += new System.EventHandler(this.btnDial5_Click);
-            // 
-            // btnDial4
-            // 
-            this.btnDial4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.btnDial4.Location = new System.Drawing.Point(3, 55);
-            this.btnDial4.Name = "btnDial4";
-            this.btnDial4.Size = new System.Drawing.Size(42, 33);
-            this.btnDial4.TabIndex = 10;
-            this.btnDial4.Text = "4";
-            this.btnDial4.UseVisualStyleBackColor = true;
-            this.btnDial4.Click += new System.EventHandler(this.btnDial4_Click);
-            // 
-            // btnDial3
-            // 
-            this.btnDial3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.btnDial3.Location = new System.Drawing.Point(99, 16);
-            this.btnDial3.Name = "btnDial3";
-            this.btnDial3.Size = new System.Drawing.Size(42, 33);
-            this.btnDial3.TabIndex = 11;
-            this.btnDial3.Text = "3";
-            this.btnDial3.UseVisualStyleBackColor = true;
-            this.btnDial3.Click += new System.EventHandler(this.btnDial3_Click);
+            this.btnListado.Location = new System.Drawing.Point(177, 179);
+            this.btnListado.Name = "btnListado";
+            this.btnListado.Size = new System.Drawing.Size(92, 23);
+            this.btnListado.TabIndex = 7;
+            this.btnListado.Text = "Listado";
+            this.btnListado.UseVisualStyleBackColor = true;
             // 
             // Llamador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(285, 283);
+            this.Controls.Add(this.btnListado);
+            this.Controls.Add(this.btnGenerador);
             this.Controls.Add(this.cmbFranja);
             this.Controls.Add(this.txtNumeroOrigen);
             this.Controls.Add(this.btnSalir);
@@ -299,5 +322,7 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.TextBox txtNumeroOrigen;
         private System.Windows.Forms.ComboBox cmbFranja;
+        private System.Windows.Forms.Button btnGenerador;
+        private System.Windows.Forms.Button btnListado;
     }
 }

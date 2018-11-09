@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0B08B6D3-C2B8-417C-9D32-889CB7D1B5B3}</ProjectGuid>
+    <ProjectGuid>{F0C3BF41-7AD5-4414-B8FE-46DCE9092CF4}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>CentralTelefonica</RootNamespace>
-    <AssemblyName>CentralTelefonica</AssemblyName>
+    <RootNamespace>Temporizador</RootNamespace>
+    <AssemblyName>Temporizador</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,34 +45,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmLlamador.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmLlamador.Designer.cs">
-      <DependentUpon>FrmLlamador.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmMenuPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmMenuPrincipal.Designer.cs">
-      <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmMostrar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmMostrar.Designer.cs">
-      <DependentUpon>FrmMostrar.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmLlamador.resx">
-      <DependentUpon>FrmLlamador.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmMenuPrincipal.resx">
-      <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmMostrar.resx">
-      <DependentUpon>FrmMostrar.cs</DependentUpon>
+    <Compile Include="Temporizador.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -95,16 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Ej_37\CentralitaHerencia.csproj">
-      <Project>{2e679961-8ac4-46af-94b9-0387b1656a17}</Project>
-      <Name>CentralitaHerencia</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GeneradorLlamadas\GeneradorLlamadas.csproj">
-      <Project>{dc4dc3e5-65aa-4641-a028-9fb2ed7142b0}</Project>
-      <Name>GeneradorLlamadas</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

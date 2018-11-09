@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CentralitaHerencia;
-
+using GeneradorLlamadas;
 namespace CentralTelefonica
 {
     public partial class Llamador : Form
@@ -146,6 +146,19 @@ namespace CentralTelefonica
             }
 
             this.txtNumeroDestino.Clear();
+        }
+
+        private void btnGenerador_Click(object sender, EventArgs e)
+        {
+            GeneradorLlamadas.GeneradorLlamadas generador = new GeneradorLlamadas.GeneradorLlamadas(this.centralita);
+            generador.Show();
+            System.Threading.Thread generadorLlamados = new System.Threading.Thread(generador.GenerarLlamadas);
+            generadorLlamados.Start();
+            if(generador.DialogResult == DialogResult.OK)
+            {
+                generadorLlamados.Interrupt();
+            }
+            this.centralita = generador.Centralita;
         }
     }
 }
